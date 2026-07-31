@@ -10,7 +10,7 @@ export function UpdateExpense({ id }: { id: number }) {
       className="rounded-md border p-2 hover:bg-gray-100"
     >
       <span className="sr-only">Edit</span>
-      <PencilIcon className="w-5" />
+      <PencilIcon className="w-3" />
     </Link>
   );
 }
@@ -21,7 +21,7 @@ export function DeleteExpense({ id }: { id: number }) {
     <form action={deleteExpenseWithId}>
       <button type="submit" className="rounded-md border p-2 hover:bg-gray-100">
         <span className="sr-only">Delete</span>
-        <TrashIcon className="w-5" />
+        <TrashIcon className="w-3" />
       </button>
     </form>
   );

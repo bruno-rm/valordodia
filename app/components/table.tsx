@@ -9,7 +9,7 @@ export default async function Table() {
       <table className="shadow-md border border-gray-200  ">
         <thead>
           <tr className="bg-gray-100 text-gray-700 text-left">
-            <th className="px-4 py-3 font-semibold">Description</th>
+            <th className="px-4 py-3 font-semibold">Item</th>
             <th className="px-4 py-3 font-semibold">Value</th>
             <th className="px-4 py-3 font-semibold">Day</th>
             <th className="px-4 py-3 font-semibold">Month</th>
@@ -32,7 +32,7 @@ export default async function Table() {
                 <td className="px-4 py-2 text-black">{item.day}</td>
                 <td className="px-4 py-2 text-black">{item.month}</td>
                 <td className="whitespace-nowrap py-3 pl-6 pr-3">
-                  <div className="flex  gap-3">
+                  <div className="flex  gap-2">
                     <UpdateExpense id={item.id} />
                     <DeleteExpense id={item.id} />
                   </div>
