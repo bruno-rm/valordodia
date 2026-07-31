@@ -1,11 +1,18 @@
 "use client";
 
-import { createExpense } from "@/lib/actions";
+import { createExpense } from "@/app/lib/actions";
+import { useActionState } from "react";
+
+const initialState = {
+  message: "",
+};
 
 export default function Form() {
+  const [state, formAction] = useActionState(createExpense, initialState);
+
   return (
     <form
-      action={createExpense}
+      action={formAction}
       className="bg-white p-6 rounded-2xl shadow-md border border-gray-200 w-full max-w-md space-y-4 mt-5"
     >
       <h2 className="text-xl font-semibold text-gray-800 mb-2">Add Expense</h2>
@@ -75,6 +82,8 @@ export default function Form() {
       >
         Add
       </button>
+
+      <p className="text-red-500">{state?.message}</p>
     </form>
   );
 }

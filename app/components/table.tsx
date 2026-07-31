@@ -1,5 +1,5 @@
-import { listExpenses } from "@/lib/data";
-import { DeleteExpense, UpdateExpense } from "@/lib/buttons";
+import { listExpenses } from "@/app/lib/data";
+import { DeleteExpense, UpdateExpense } from "@/app/lib/buttons";
 
 export default async function Table() {
   const data = await listExpenses();

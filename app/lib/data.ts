@@ -7,7 +7,6 @@ export async function listExpenses() {
 	const data = await sql<Expenses[]>`
     SELECT * FROM expenses;
   `;
-
 	return data;
 }
 
@@ -21,7 +20,7 @@ export async function fetchExpenseById(id: number) {
     const expense = data.map((expense) => ({
       ...expense,      
     }));
-
+    
     return expense[0];
   } catch (error) {
     console.error('Database Error:', error);

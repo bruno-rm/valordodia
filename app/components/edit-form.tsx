@@ -1,11 +1,13 @@
 "use client";
 
-import { updateExpense } from "@/lib/actions";
+import { updateExpense } from "@/app/lib/actions";
 import Link from "next/link";
-import { Expenses } from './definitions';
+import { Expenses } from "@/app/lib/definitions";
 
 
-export default function EditForm({ expense }: Expenses) {
+
+export default function EditForm({expense}: {expense: Expenses}) {
+  
   const updateExpenseWithId = updateExpense.bind(null, expense.id);
   return (
     <form
