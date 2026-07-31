@@ -27,10 +27,10 @@ export default async function Table() {
                   index % 2 === 0 ? "bg-white" : "bg-gray-50"
                 }`}
               >
-                <td className="px-4 py-2">{item.description}</td>
-                <td className="px-4 py-2 ">{item.value}</td>
-                <td className="px-4 py-2 ">{item.day}</td>
-                <td className="px-4 py-2 ">{item.month}</td>
+                <td className="px-4 py-2 text-black">{item.description}</td>
+                <td className="px-4 py-2 text-black">{item.value}</td>
+                <td className="px-4 py-2 text-black">{item.day}</td>
+                <td className="px-4 py-2 text-black">{item.month}</td>
                 <td className="whitespace-nowrap py-3 pl-6 pr-3">
                   <div className="flex  gap-3">
                     <UpdateExpense id={item.id} />
@@ -41,7 +41,7 @@ export default async function Table() {
             ))
           ) : (
             <tr>
-              <td colSpan={4} className="text-center text-gray-500 py-6 italic">
+              <td colSpan={4} className="text-center text-gray-900 py-6 italic">
                 No data available
               </td>
             </tr>
